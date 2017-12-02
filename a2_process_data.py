@@ -19,11 +19,74 @@ with open("a2_input.csv") as input_file:
 ### Print your results using the print function.
 #######################################################
 
-print("This assignment (assignment 2) hasn't been finished.")
-print("All it can do is print out the contents of a couple of cells of the file a2_input.csv:")
-print("Cell at index 0,0:")
-print(contents[0][0])
-print("Cell at index 0,1:")
-print(contents[0][1])
-print("Cell at index 1,0:")
-print(contents[1][0])
+
+
+###print("All it can do is print out the contents of a couple of cells of the file a2_input.csv:")
+###print("Cells at index 5")
+###print(contents[5])
+###print(type(contents[5]))
+###print("Cell at index 13,6:")
+###print(contents[13][6])
+###print(type(contents[13][6]))
+###print("Cell at index 10,2:")
+###print(contents[10][2])
+###print(type(contents[10][2]))
+###print("Cell at index 1,0:")
+###print(contents[1][0])
+###print(type(contents[1][0]))
+###a = int(contents[3][1])
+###b = int(contents[3][2])
+###c = int(contents[3][3])
+###total_of_germany = a + b + c
+###print("Total german tourists " + str(total_of_germany))
+
+
+###print("Nations:coming tourists in 2014,2015,2016")
+###print("cell at index 3:7,0:3")
+###i=3
+###while(i<=7):
+######	print(contents[i][0] + ":" + " " + contents[i][1]  + " " + "," + " " + contents[i][2] + " "  +"," +  " " + contents[i][3])
+######	i=i+1
+###print(type(contents[3:7][0:3]))
+
+###x=input("which order do you want in nations")
+
+###if x in range(1,20):
+######	print(contents[int(x)+2][0])
+###else:
+######	print('There are only 20 nations')
+###print(type(contents[int(x)+2][0]))
+
+print("<!DOCTYPE html>")
+print("<html lang=\"en\">")
+print("<head>")
+print("<title>Coming tourists to the Nations</title>")
+print("<meta charset=\"utf-8\" />")
+print("</head>")
+print("<body>")
+
+print("<table border= solid 1px >")
+a=0
+
+while (a<=24):
+	b=0
+	print('<tr>')
+	while (b<=6):
+		if a in (0,1,2):
+			print('<th>')
+		else:
+			print('<td>')
+		print(contents[a][b]) 
+		if a in (1,2):
+			print('</th>')
+		else:
+			print('</td>')
+		b+=1
+	print('</tr>')
+	
+	a += 1
+
+print("</table>")
+print("</body>")
+print("</html>")
+	
