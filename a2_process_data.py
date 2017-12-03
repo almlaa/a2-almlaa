@@ -103,8 +103,10 @@ while (a<=23):
 	print('</tr>')
 	
 	a += 1
-
 print("</table>")
+
+s=0
+		
 
 print("<p>Total of nations who increased 2014 to 2015:6337656 </p>")
 print("</body>")
