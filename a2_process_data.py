@@ -67,48 +67,62 @@ print("<head>")
 print("<title>Coming tourists to the Nations</title>")
 print("<meta charset=\"utf-8\" />")
 print(""" <style>
-  table{ backgraund-color:#f6fca4
+  body{background-color:#efe9c9;
+  }
+  table{ 
+  border: 1.5px solid;
   }
 
-  td{color:#306812
-  border: 1.5px solid
+  td{color: #306812;
+  border: 1.5px solid;
+  text-allign:center;
   } 
   
-  th{color:#68112a
-   border: 1.5px solid
+  th{color: #68112a;
+  border: 1.5px solid;
+  text-allign: center;
   }
-
-
-<style/> """)
+ p,h2{
+ color:#68112a;
+ }
+</style> """)
 print("</head>")
 print("<body>")
-
+print("<h2>" +contents[0][0] +"</h2>")
 print("<table>")
-a=0
 
+
+a=1
 while (a<=23):
 	b=0
-	print('<tr>')
+	print("<tr>")
 	while (b<=6):
 		if a in (0,1,2):
-			print('<th>')
+			print("<th>")
 		else:
-			print('<td>')
+			print("<td>")
 		print(contents[a][b]) 
 		if a in (0,1,2):
-			print('</th>')
+			print("</th>")
 		else:
-			print('</td>')
+			print("</td>")
 		b+=1
-	print('</tr>')
+	print("</tr>")
 	
 	a += 1
 print("</table>")
 
-s=0
-		
 
-print("<p>Total of nations who increased 2014 to 2015:6337656 </p>")
+print("<p>Total of nations tourists in 2015 who increased 2014 to 2015: ")
+
+x=[]
+for s in range (3,22):
+	if contents[s][2] > contents[s][1]:
+		x.append(int(contents[s][2]))
+print(sum(x))
+print("</p>")
+print(" <p> There is a significantly decreasing in coming tourists number on every Nations.</p>")
+
 print("</body>")
 print("</html>")
 	
